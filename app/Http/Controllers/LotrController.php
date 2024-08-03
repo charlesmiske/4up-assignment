@@ -8,11 +8,17 @@ use GuzzleHttp\Client;
 class LotrController extends Controller
 {
     //
-    public function getCharacter()
+    private $bearer;
+
+    public function __construct()
     {
-        $bearer = env('LOTRAPI');
+        $this->bearer = env('LOTRAPI');   
+    }
+
+    public function index()
+    {
         $url = 'https://the-one-api.dev/v2/character?limit=20';
-        $client = new Client(['headers' => ['Authorization' => 'Bearer ' . $bearer]]);
+        $client = new Client(['headers' => ['Authorization' => 'Bearer ' . $this->bearer]]);
 
         $response = $client->get($url);
         $data = json_decode($response->getBody(), true);
@@ -20,4 +26,16 @@ class LotrController extends Controller
         return view('character', ['characterData' => $data['docs']]);
         //  print_r($data['docs']);
     }
+
+    public function filter(Request $request)
+    {
+        $url = 'https://the-one-api.dev/v2/character?name=/' . $request->name . '/i&limit=20';
+        $client = new Client(['headers' => ['Authorization' => 'Bearer ' . $this->bearer]]);
+
+        $response = $client->get($url);
+        $data = json_decode($response->getBody(), true);
+
+        return view('character', ['characterData' => $data['docs']]);
+    }
+
 }

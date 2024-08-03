@@ -7,8 +7,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// 
+Route::get('/character/filter', [LotrController::class, 'filter'])->name('character.filter');
 
-Route::get('/character', [LotrController::class, 'getCharacter']);
+Route::resource('/character', LotrController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
