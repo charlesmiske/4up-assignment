@@ -1,7 +1,7 @@
 <body>
 <html>
 <h3>Use</h3>
-<p>go to <a href="https://project.charlesmiske.com/character">HERE</a> and see list of characters from LOTR.<br>Type at least a partial name and submit. If there no results currently shows empty grid. If it fails you'll get a laravel error message.<br><b>To Do:</b>catch no results with a message, and catch error with a message.<br>
+<p>go to <a href="https://project.charlesmiske.com/character" target="_BLANK">HERE</a> and see list of characters from LOTR.<br>Type at least a partial name and submit. If there no results currently shows empty grid. If it fails you'll get a laravel error message.<br><b>To Do:</b>catch no results with a message, and catch error with a message.<br>
 currently if you attempt a search less than ten or so seconds apart it will gripe at you.</p>
 <hr />
 <p>NOTE: This was an educational experience, as I have relied somewhat heavily on frontend, devops and IT for much of my infrastructure, so had to replicate as much as I could in the time given. I was unable to complete the entire project, but was able to mess around with models, migrations, controllers and routes, which are slightly different in C#/.NET but the same idea. I'm still confident that on the job I would be able to come up to speed quickly, as I stated in the interview. Having an existing codebase to parse and study and emulate is a huge benefit in acquiring new skills quickly. Thanks for the opportunity to explore this option, and I enjoyed the learning process.</p>
