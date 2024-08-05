@@ -9,7 +9,7 @@ class lists extends Model
 {
     use HasFactory;
 
-    protected $fillabe = [
+    protected $fillable = [
         'name',
         'active'
     ];

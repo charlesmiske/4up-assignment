@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\Models\lists;
+use App\Models\characterList;
+
+
 
 class LotrController extends Controller
 {

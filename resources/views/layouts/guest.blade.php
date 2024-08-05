@@ -21,7 +21,12 @@
                     <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 </a>
             </div>
-
+            @session('success')
+                <div class="success-message">{{ session('success') }}</div>
+            @endsession
+            @session('fail')
+                <div class="fail-message">{{ session('fail') }}</div>
+            @endsession
             <div class="w-full mt-6 px-6 py-4 bg-white shadow-md sm:rounded-lg">
                 {{ $slot }}
             </div>

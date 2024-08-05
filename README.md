@@ -24,9 +24,13 @@ got controller set up, added route, added some basic CSS, did blade file <br>
 Will be unable to install and configure and use JS frameworks<br>
 What is the MVP about this project?<br>
 Something to keep in mind is that the LOTR API has very small limits, so it's not like we could hit it to update on every character entered in the search<br>
-
 </p>
-
+<p>
+<b>Aug 4:</b><br>
+Added migrations for list db tables.<br>
+There is an index on list.name but not implemented in code yet<br>
+Sorting out where I want list management<br>
+List show/add with basic error trapping<br>
 </html>
 </body>
 
